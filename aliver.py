@@ -1,15 +1,18 @@
-from flask import Flask
+from flask import Flask, render_template
 from threading import Thread
 
-app = Flask('')
+from gevent.pywsgi import WSGIServer
+
+app = Flask("IslamQA Bot")
 
 @app.route('/')
 def main():
-    return "Your bot is alive!"
+    return render_template('index.html', my_string="Wheeeee!", my_list=[0,1,2,3,4,5])
 
 def run():
-    app.run(host="0.0.0.0", port=8080)
+    http_server = WSGIServer(('0.0.0.0', 5000), app)
+    http_server.serve_forever()
 
-def keep_alive():
+def aliver():
     server = Thread(target=run)
     server.start()
