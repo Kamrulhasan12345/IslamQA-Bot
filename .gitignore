@@ -1,3 +1,4 @@
 *.sh
 .replit
 .env
+__pycache__
