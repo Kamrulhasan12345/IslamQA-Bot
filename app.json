@@ -1,9 +1,9 @@
 {
-    "apps": [
-        {
-            "name": "IslamQA-Bot",
-            "script": "python bot.py",
-            "args" : ""
-        }
-    ]
+  "apps": [
+    {
+      "name": "IslamQA-Bot",
+      "script": "python bot.py",
+      "args": ""
+    }
+  ]
 }
