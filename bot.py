@@ -3,12 +3,10 @@ import random
 import discord
 
 from discord.ext import commands
-from dotenv import load_dotenv
 
 from scrapSite import fetchQuest, fetchTitle, fetchCategories, fetchImportantTopics, fetchArticles, fetchArticle
+from config import TOKEN
 
-load_dotenv()
-TOKEN = os.getenv('TOKEN')
 
 bot = commands.Bot(command_prefix='!iqa ')
 
